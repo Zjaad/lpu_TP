@@ -1,9 +1,7 @@
 <?php
-// Initialize variables for user feedback
 $success = $error = '';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'database.php'; // Ensure this points to your actual database connection file
+    include 'database.php';
 
     $taskName = trim($_POST['Task_title']);
     $taskDescription = trim($_POST['taskDescription']);
@@ -26,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h1>Votre Application de Gestion des Tâches</h1>
-    <nav class="navbar">
+    <nav>
         <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="tasks.php">Liste des Tâches</a></li>
@@ -63,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </main>
 
     <footer>
-        <!-- Footer -->
+        copyright ...
     </footer>
 </body>
 </html>
